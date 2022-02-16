@@ -20,7 +20,7 @@ export default function App() {
       y = min;
 
     const interval = setInterval(() => {
-      if ((x === 0 && y === 0) || start === false) {
+      if ((x == 0 && y == 0) || start == false) {
         document.title = `pomodoro timer`;
         setStart(false);
         return;
