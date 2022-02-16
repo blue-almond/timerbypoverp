@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+:root {
+  /*========== Colors ==========*/
+  --hue-color: 240;
+
+  --first-color: hsl(var(--hue-color), 53%, 49%);
+  --title-color: hsl(var(--hue-color), 53%, 15%);
+  --text-color: hsl(var(--hue-color), 12%, 35%);
+  --text-color-light: hsl(var(--hue-color), 12%, 65%);
+  --white-color: #fff;
+  --body-color: hsl(var(--hue-color), 24%, 94%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 3rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-25: 0.25rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-normal: 1;
+  --z-tooltip: 10;
+}
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(22, 25, 50);
+  color: #ebebeb;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clock__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 20px solid #1e213f;
+  border-radius: 50%;
+  padding: 0.4rem;
+  box-shadow: 10px 10px 20px #101325, -10px -10px 20px #1c203f;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.buttons {
+  background-color: #1e213f;
+  padding: 0.4rem 0.2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.start {
+  position: absolute;
+  bottom: 20%;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+.btn {
+  border: none;
+  font-family: inherit;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  color: inherit;
+  background-color: transparent;
+  font-size: inherit;
+  border-radius: 30px;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.btn-form {
+  border: none;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: white;
+  background-color: #3e98c7;
+  font-size: inherit;
+  border-radius: 10px;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.btn.active {
+  background-color: #3e98c7;
+}
+main {
+  padding: 2rem;
+}
+.settings {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #ebebeb;
+  border-radius: 8px;
+}
+form {
+  padding: 1rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+form h3 {
+  padding: 0.8rem 0;
+  letter-spacing: 4px;
+  color: #131313;
+}
+.title__form {
+  border-bottom: 1px solid #b6afaf;
+  color: #131313;
+}
+.form__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.form__inputs h5 {
+  color: #4d4f5f;
+}
+input[type='number'] {
+  padding: 0.2rem;
+  font-family: inherit;
+  border: 1px solid #b6afaf;
+  border-radius: 5px;
+}
+.phantom {
+  display: none;
+}
+@media (max-width: 450px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  .box {
+    max-width: 300px;
+  }
+  .buttons {
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .btn {
+    border-radius: 10px;
+  }
+}
