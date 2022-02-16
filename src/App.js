@@ -7,7 +7,9 @@ import ModalBox from './ModalBox';
 import { AudioPlayerProvider } from 'react-use-audio-player';
 import AudioPlayer from './AudioPlayer';
 
-export default function App() {
+export default App;
+
+function App() {
   const [min, setMin] = useState(25);
   const [sec, setSec] = useState(0);
   const [amount, setAmount] = useState(min);
